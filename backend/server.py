@@ -121,7 +121,7 @@ async def call_gemini_api(prompt: str, system_message: str = "You are a helpful 
             api_key=GEMINI_API_KEY,
             session_id=session_id,
             system_message=system_message
-        ).with_model("gemini", "gemini-1.5-flash")
+        ).with_model("gemini", "gemini-2.5-flash")
         
         user_message = UserMessage(text=prompt)
         response = await chat.send_message(user_message)
